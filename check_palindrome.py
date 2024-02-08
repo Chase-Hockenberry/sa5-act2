@@ -10,10 +10,12 @@ if choice == "t":
     check_palindrome(text)
 elif choice == "f":
     try:
-        file = input("Enter filepath for palindrome check: ")
-        text = open(file, "r").read()
+        filepath = input("Enter filepath for palindrome check: ")
+        text = open(filepath, "r").read()
         check_palindrome(text)
-    except(OSError):
-        print(f"Unable to process file at {file}")
+    except OSError:
+        print(f"Unable to process file at {filepath}")
+
 else:
     print("Invalid choice")
+
